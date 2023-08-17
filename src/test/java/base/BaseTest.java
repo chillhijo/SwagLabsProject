@@ -15,10 +15,9 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        driver = new ChromeDriver(options);
-        driver.get("https://www.saucedemo.com/");
         options.addArguments("--start-maximized");
         options.addArguments("--disable-extensions");
+        driver = new ChromeDriver(options);
     }
 
     @AfterMethod
