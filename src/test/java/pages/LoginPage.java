@@ -1,7 +1,6 @@
 package pages;
 
 import base.PageBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,7 +31,5 @@ public class LoginPage extends PageBase {
 
         wait.until(ExpectedConditions.visibilityOf(loginLogo));
         Assert.assertEquals(loginLogo.getText(), "Swag Labs", "Header title not matching!");
-
-
     }
 }
