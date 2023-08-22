@@ -18,8 +18,12 @@ public class LoginPage extends PageBase {
         driver.get("https://www.saucedemo.com/");
     }
 
-    @FindBy(className = "login-logo")
+    // WEB ELEMENTS
+    @FindBy(className = "login_logo")
     private WebElement loginLogo;
+
+
+    //VERIFY METHODS
 
     public void verifyLoginPage(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -27,7 +31,6 @@ public class LoginPage extends PageBase {
         String ActualTitle = driver.getTitle();
         String ExpectedTitle = "Swag Labs";
         Assert.assertEquals(ActualTitle, ExpectedTitle);
-
 
         wait.until(ExpectedConditions.visibilityOf(loginLogo));
         Assert.assertEquals(loginLogo.getText(), "Swag Labs", "Header title not matching!");

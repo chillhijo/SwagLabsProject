@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +49,7 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.BaseTest.startBrowserTest">
+  <component name="RunManager" selected="TestNG.LoginTest.verifyLoginPage">
     <configuration name="BaseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="base.BaseTest" />
       <module name="SwagLabsProject" />
@@ -80,8 +81,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTest.verifyLoginPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTest" />
+      <option name="METHOD_NAME" value="verifyLoginPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.verifyLoginPage" />
         <item itemvalue="TestNG.BaseTest.startBrowserTest" />
         <item itemvalue="Application.BaseTest" />
       </list>
