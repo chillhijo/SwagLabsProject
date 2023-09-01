@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters({"browser"})
-    public void setUp(@Optional("firefox") String browser) {
+    public void setUp(@Optional("chrome") String browser) {
         if (browser.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", "resources/geckodriver.exe");
             FirefoxProfile profile = new FirefoxProfile();
