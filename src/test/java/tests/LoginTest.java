@@ -14,5 +14,6 @@ public class LoginTest extends BaseTest {
     public void verifyLoginPage() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.verifyLoginPage();
+        loginPage.loginLockedOutUser("locked_out_user");
     }
 }

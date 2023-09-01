@@ -19,7 +19,6 @@ public class LoginPage extends PageBase {
         driver.get("https://www.saucedemo.com/");
     }
 
-
     //VERIFY METHODS
 
     public void verifyLoginPage(){
@@ -45,5 +44,57 @@ public class LoginPage extends PageBase {
         WebElement loginButton = driver.findElement(By.id("login-button"));
         wait.until(ExpectedConditions.visibilityOf(loginLogo));
         Assert.assertEquals(loginButton.getAttribute("value"), "Login", "Login button value is not matching!");
+    }
+
+    public void loginStandardUser(String user) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if ("standard_user".equals(user)){
+            driver.findElement(By.id("user-name")).sendKeys("standard_user");
+            driver.findElement(By.id("password")).sendKeys("secret_sauce");
+            driver.findElement(By.id("login-button")).click();
+            System.out.println("User is logged in as Standard User.");
+        }
+        else {
+            System.out.println("Test failed! Standard user not logged in.");
+        }
+    }
+
+    public void loginLockedOutUser(String user) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if ("locked_out_user".equals(user)){
+            driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
+            driver.findElement(By.id("password")).sendKeys("secret_sauce");
+            driver.findElement(By.id("login-button")).click();
+            System.out.println("User is logged in as Locked out user.");
+        }
+        else {
+            System.out.println("Test failed! Locked out user not logged in.");
+        }
+    }
+
+    public void loginProblemUser(String user) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if ("problem_user".equals(user)){
+            driver.findElement(By.id("user-name")).sendKeys("problem_user");
+            driver.findElement(By.id("password")).sendKeys("secret_sauce");
+            driver.findElement(By.id("login-button")).click();
+            System.out.println("User is logged in as Problem user.");
+        }
+        else {
+            System.out.println("Test failed! Problem user not logged in.");
+        }
+    }
+
+    public void loginPerformanceGlitchUser(String user) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if ("performance_glitch_user".equals(user)){
+            driver.findElement(By.id("user-name")).sendKeys("performance_glitch_user");
+            driver.findElement(By.id("password")).sendKeys("secret_sauce");
+            driver.findElement(By.id("login-button")).click();
+            System.out.println("User is logged in as Performance glitch user.");
+        }
+        else {
+            System.out.println("Test failed! Performance glitch user not logged in.");
+        }
     }
 }
