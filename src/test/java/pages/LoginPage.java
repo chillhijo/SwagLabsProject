@@ -2,14 +2,17 @@ package pages;
 
 import base.PageBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class LoginPage extends PageBase {
@@ -96,5 +99,19 @@ public class LoginPage extends PageBase {
         else {
             System.out.println("Test failed! Performance glitch user not logged in.");
         }
+    }
+
+    public void takeAScreenShot() throws IOException {
+        WebElement errorMessageElement = driver.findElement(By.className("error-message-container"));
+        File source = errorMessageElement.getScreenshotAs(OutputType.FILE);
+        File destination = new File("resources/screenshots/Error Message Element.png");
+        FileHandler.copy(source,destination);
+    }
+
+    public void takeFullScreenPageScreenShot() throws IOException {
+        WebElement errorMessageElement = driver.findElement(By.id("root"));
+        File source = errorMessageElement.getScreenshotAs(OutputType.FILE);
+        File destination = new File("resources/screenshots/Full Page.png");
+        FileHandler.copy(source,destination);
     }
 }
