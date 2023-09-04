@@ -17,6 +17,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.verifyLoginPage();
         loginPage.loginLockedOutUser("locked_out_user");
+        loginPage.verifyLockedOutUserErrorMessages();
         loginPage.takeAScreenShot();
         loginPage.takeFullScreenPageScreenShot();
     }

@@ -68,10 +68,10 @@ public class LoginPage extends PageBase {
             driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
             driver.findElement(By.id("login-button")).click();
-            System.out.println("User is logged in as Locked out user.");
+            System.out.println("Locked out user tried to login.");
         }
         else {
-            System.out.println("Test failed! Locked out user not logged in.");
+            System.out.println("Test failed!");
         }
     }
 
@@ -113,5 +113,12 @@ public class LoginPage extends PageBase {
         File source = errorMessageElement.getScreenshotAs(OutputType.FILE);
         File destination = new File("resources/screenshots/Full Page.png");
         FileHandler.copy(source,destination);
+    }
+
+    public void verifyLockedOutUserErrorMessages() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement errorMessageContainer = driver.findElement(By.className("error-message-container"));
+        wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
+        Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Sorry, this user has been locked out.", "Error message do not match!");
     }
 }
