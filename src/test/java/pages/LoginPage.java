@@ -121,4 +121,5 @@ public class LoginPage extends PageBase {
         wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
         Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Sorry, this user has been locked out.", "Error message do not match!");
     }
+
 }
