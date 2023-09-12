@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.IOException;
@@ -20,5 +21,14 @@ public class LoginTest extends BaseTest {
         loginPage.verifyLockedOutUserErrorMessages();
         loginPage.takeAScreenShot();
         loginPage.takeFullScreenPageScreenShot();
+    }
+
+    @Test
+    public void verifyHomePage() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.verifyLoginPage();
+        loginPage.loginStandardUser("standard_user");
+        HomePage homePage = new HomePage(driver);
+        homePage.verifyHomePage();
     }
 }
