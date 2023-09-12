@@ -38,8 +38,9 @@ public class HomePage extends PageBase {
     public void addBackpackToCart() {
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(10));
 
-        wait.until(ExpectedConditions.elementToBeClickable(addBackpackToCart));
-        addBackpackToCart.click();
+        WebElement addBackpack = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
+        wait.until(ExpectedConditions.elementToBeClickable(addBackpack));
+        addBackpack.click();
     }
 
     public void verifyShoppingCartBadge() {
