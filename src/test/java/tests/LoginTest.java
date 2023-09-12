@@ -30,5 +30,6 @@ public class LoginTest extends BaseTest {
         loginPage.loginStandardUser("standard_user");
         HomePage homePage = new HomePage(driver);
         homePage.verifyHomePage();
+        homePage.addBackpackToCart();
     }
 }
