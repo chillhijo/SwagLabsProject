@@ -38,6 +38,46 @@ public class LoginTest extends BaseTest {
         loginPage.loginLockedOutUser("locked_out_user");
     }
 
+    @Test(description = "Login with problem user")
+    public void login_with_problem_user_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.loginProblemUser("problem_user");
+    }
+
+    @Test(description = "Login with performance glitch user")
+    public void login_with_performance_glitch_user_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.loginPerformanceGlitchUser("performance_glitch_user");
+    }
+
+    @Test(description = "Login with invalid username")
+    public void login_with_invalid_username_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.verifyLoginValidations("invalid username", "secret_sauce");
+    }
+
+    @Test(description = "Login with invalid password")
+    public void login_with_invalid_password_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.verifyLoginValidations("standard_user","invalid password");
+    }
+
+    @Test(description = "Login with empty username field")
+    public void login_with_empty_username_field_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.verifyLoginValidations("", "secret_sauce");
+    }
+    @Test(description = "Login with empty password field")
+    public void login_with_empty_password_field_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.verifyLoginValidations("standard_user", "");
+    }
+    @Test(description = "Login with empty username and password fields")
+    public void login_with_empty_username_and_password_fields_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.verifyLoginValidations("", "");
+    }
+
     @Test(description = "test verifying login page")
     public void verifyLoginPage() throws IOException {
         loginPage = new LoginPage(driver);

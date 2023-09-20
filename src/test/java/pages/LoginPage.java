@@ -52,8 +52,6 @@ public class LoginPage extends PageBase {
     }
 
     public void verifyLoginPageUrl(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         String ActualTitle = driver.getTitle();
         String ExpectedTitle = "Swag Labs";
         Assert.assertEquals(ActualTitle, ExpectedTitle);
@@ -100,7 +98,6 @@ public class LoginPage extends PageBase {
     }
 
     public void loginStandardUser(String user) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         if ("standard_user".equals(user)){
             driver.findElement(By.id("user-name")).sendKeys("standard_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -113,7 +110,6 @@ public class LoginPage extends PageBase {
     }
 
     public void loginLockedOutUser(String user) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         if ("locked_out_user".equals(user)){
             driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -126,7 +122,6 @@ public class LoginPage extends PageBase {
     }
 
     public void loginProblemUser(String user) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         if ("problem_user".equals(user)){
             driver.findElement(By.id("user-name")).sendKeys("problem_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -139,7 +134,6 @@ public class LoginPage extends PageBase {
     }
 
     public void loginPerformanceGlitchUser(String user) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         if ("performance_glitch_user".equals(user)){
             driver.findElement(By.id("user-name")).sendKeys("performance_glitch_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -150,6 +144,39 @@ public class LoginPage extends PageBase {
             System.out.println("Test failed! Performance glitch user not logged in.");
         }
     }
+
+    public void verifyLoginValidations(String userName, String password) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.findElement(By.id("user-name")).sendKeys(userName);
+        driver.findElement(By.id("password")).sendKeys(password);
+        if ("".equals(userName)) {
+            System.out.println("UserName is empty: " + userName.isEmpty());
+        }else if ("".equals(password)) {
+            System.out.println("Password is empty: " + password.isEmpty());
+        }
+    }
+
+    public void loginWithInvalidUsername() {
+
+    }
+
+    public void loginWithInvalidPassword() {
+
+    }
+
+    public void loginWithEmptyUsernameField() {
+
+    }
+
+    public void loginWithEmptyPasswordField() {
+
+    }
+
+    public void loginWithEmptyUsernameAndPasswordFields() {
+
+    }
+
+
 
     public void takeAScreenShot() throws IOException {
         WebElement errorMessageElement = driver.findElement(By.className("error-message-container"));

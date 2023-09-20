@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added Test Cases text file">
+    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added new methods for login page class and login page test class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/screenshots/Error Message Element.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/screenshots/Error Message Element.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/screenshots/Full Page.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/screenshots/Full Page.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCases.text" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/TestCases.text" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
@@ -60,8 +57,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources" />
+      <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.LoginTest.verify_login_page_test">
@@ -174,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1692019523391</updated>
       <workItem from="1695129577061" duration="901000" />
-      <workItem from="1695211651065" duration="3786000" />
+      <workItem from="1695211651065" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
@@ -184,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695214542149</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added new methods for login page class and login page test class">
+      <option name="closed" value="true" />
+      <created>1695216132968</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695216132968</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,14 +208,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Test Cases text file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Test Cases text file" />
+    <MESSAGE value="Added new methods for login page class and login page test class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new methods for login page class and login page test class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/LoginTest.java</url>
-          <line>57</line>
+          <line>97</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
