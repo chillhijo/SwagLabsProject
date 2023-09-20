@@ -13,9 +13,34 @@ public class LoginTest extends BaseTest {
         super();
     }
 
+    LoginPage loginPage;
+    HomePage homePage;
+
+    @Test(description = "Verify Login page", priority = 1)
+    public void verify_login_page_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.verifyLoginPageUrl();
+        loginPage.verifyLoginPageLoginLogo();
+        loginPage.verifyLoginPageUsernameInputBox();
+        loginPage.verifyLoginPagePasswordInputBox();
+        loginPage.verifyLoginPageLoginButton();
+    }
+
+    @Test(description = "Login with standard user")
+    public void login_with_standard_user_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.loginStandardUser("standard_user");
+    }
+
+    @Test(description = "Login with locked out user")
+    public void login_with_locked_out_user_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.loginLockedOutUser("locked_out_user");
+    }
+
     @Test(description = "test verifying login page")
     public void verifyLoginPage() throws IOException {
-        LoginPage loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(driver);
         loginPage.verifyLoginPage();
         loginPage.loginLockedOutUser("locked_out_user");
         loginPage.verifyLockedOutUserErrorMessages();
@@ -25,10 +50,10 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void verifyHomePage() {
-        LoginPage loginPage = new LoginPage(driver);
+        loginPage = new LoginPage(driver);
         loginPage.verifyLoginPage();
         loginPage.loginStandardUser("standard_user");
-        HomePage homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
         homePage.verifyHomePage();
         homePage.addBackpackToCart();
     }

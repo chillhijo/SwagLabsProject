@@ -47,6 +47,56 @@ public class LoginPage extends PageBase {
         WebElement loginButton = driver.findElement(By.id("login-button"));
         wait.until(ExpectedConditions.visibilityOf(loginLogo));
         Assert.assertEquals(loginButton.getAttribute("value"), "Login", "Login button value is not matching!");
+
+        System.out.println("Login page is open and verified!");
+    }
+
+    public void verifyLoginPageUrl(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        String ActualTitle = driver.getTitle();
+        String ExpectedTitle = "Swag Labs";
+        Assert.assertEquals(ActualTitle, ExpectedTitle);
+        System.out.println(ActualTitle);
+        System.out.println("Login page url is valid.");
+    }
+
+    public void verifyLoginPageLoginLogo() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement loginLogo = driver.findElement(By.className("login_logo"));
+        wait.until(ExpectedConditions.visibilityOf(loginLogo));
+        Assert.assertEquals(loginLogo.getText(), "Swag Labs", "Header title not matching!");
+        System.out.println("Login logo is correct and matching.");
+    }
+
+    public void verifyLoginPageUsernameInputBox() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement usernameInputBox = driver.findElement(By.id("user-name"));
+        wait.until(ExpectedConditions.elementToBeClickable(usernameInputBox));
+        Assert.assertEquals(usernameInputBox.getAttribute("placeholder"), "Username", "Username placeholder is not matching!");
+        System.out.println("Username input box is visible and clickable!");
+    }
+
+    public void verifyLoginPagePasswordInputBox() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement passwordInputBox = driver.findElement(By.id("password"));
+        wait.until(ExpectedConditions.elementToBeClickable(passwordInputBox));
+        Assert.assertEquals(passwordInputBox.getAttribute("placeholder"), "Password", "Password placeholder is not matching!");
+        System.out.println("Password input box is visible and clickable");
+
+    }
+
+    public void verifyLoginPageLoginButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement loginButton = driver.findElement(By.id("login-button"));
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+        Assert.assertEquals(loginButton.getAttribute("value"), "Login", "Login button value is not matching!");
+        System.out.println("Login button is visible and clickable");
+
     }
 
     public void loginStandardUser(String user) {
