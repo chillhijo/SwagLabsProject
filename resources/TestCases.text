@@ -1,0 +1,23 @@
+Login Page Test Cases
+1. Verify Login Page
+
+Login Test Cases
+1. Login with standard user
+2. Login with locked out user
+3. Login with problem user
+4. Login with performance glitch user
+5. Login with invalid username
+6. Login with invalid password
+7. Login with empty username
+8. Login with empty password
+9. Login with empty username and password
+
+
+Home Page Test Cases
+1. Verify Home page
+2. Open the hamburger menu
+3. Add to the cart Backpack
+4. Add all items to the cart
+5. Remove item from the cart
+6. Remove all items from the cart
+7. Open sorting dropdown
