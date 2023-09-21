@@ -7,9 +7,9 @@ import pages.LoginPage;
 
 import java.io.IOException;
 
-public class LoginTest extends BaseTest {
+public class login_tests extends BaseTest {
 
-    public LoginTest() {
+    public login_tests() {
         super();
     }
 
