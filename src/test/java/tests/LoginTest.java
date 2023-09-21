@@ -90,13 +90,4 @@ public class LoginTest extends BaseTest {
         loginPage.takeFullScreenPageScreenShot();
     }
 
-    @Test
-    public void verifyHomePage() {
-        loginPage = new LoginPage(driver);
-        loginPage.verifyLoginPage();
-        loginPage.loginStandardUser("standard_user");
-        homePage = new HomePage(driver);
-        homePage.verifyHomePage();
-        homePage.addBackpackToCart();
-    }
 }

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/TestCases.text" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test_cases/TestCases.text" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/screenshots/Error Message Element.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/screenshots/Error Message Element.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +176,7 @@
       <workItem from="1695129577061" duration="901000" />
       <workItem from="1695211651065" duration="5167000" />
       <workItem from="1695278129274" duration="8730000" />
-      <workItem from="1695296482968" duration="981000" />
+      <workItem from="1695296482968" duration="1286000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
