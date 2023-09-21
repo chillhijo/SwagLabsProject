@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added new methods for verifying invalid login credentials">
+    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/screenshots/Error Message Element.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/screenshots/Error Message Element.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest.login_with_empty_username_field_test">
+  <component name="RunManager" selected="TestNG.LoginTest.verify_login_page_test">
     <configuration name="LoginTest.login_with_empty_password_field_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
@@ -157,9 +154,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest.verify_login_page_test" />
         <item itemvalue="TestNG.LoginTest.login_with_empty_username_field_test" />
         <item itemvalue="TestNG.LoginTest.login_with_empty_password_field_test" />
-        <item itemvalue="TestNG.LoginTest.verify_login_page_test" />
         <item itemvalue="TestNG.LoginTest.login_with_locked_out_user_test" />
         <item itemvalue="TestNG.LoginTest.login_with_standard_user_test" />
       </list>
@@ -178,7 +175,7 @@
       <updated>1692019523391</updated>
       <workItem from="1695129577061" duration="901000" />
       <workItem from="1695211651065" duration="5167000" />
-      <workItem from="1695278129274" duration="6363000" />
+      <workItem from="1695278129274" duration="8730000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
@@ -204,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695217724948</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added PageFactory initialization into PageBase, and some more improvements">
+      <option name="closed" value="true" />
+      <created>1695289126849</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695289126849</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +230,8 @@
     <MESSAGE value="Added Test Cases text file" />
     <MESSAGE value="Added new methods for login page class and login page test class" />
     <MESSAGE value="Added new methods for verifying invalid login credentials" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new methods for verifying invalid login credentials" />
+    <MESSAGE value="Added PageFactory initialization into PageBase, and some more improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added PageFactory initialization into PageBase, and some more improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,16 +240,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/tests/LoginTest.java</url>
           <line>99</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/LoginPage.java</url>
-          <line>190</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/pages/LoginPage.java</url>
-          <line>188</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
