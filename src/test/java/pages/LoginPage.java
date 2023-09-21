@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -22,6 +23,10 @@ public class LoginPage extends PageBase {
         driver.get("https://www.saucedemo.com/");
     }
 
+
+    //WEB ELEMENTS
+    @FindBy (xpath = "//div[contains(@class, 'error')]")
+    private WebElement errorMessageContainer;
     //VERIFY METHODS
 
     public void verifyLoginPage(){
@@ -145,15 +150,17 @@ public class LoginPage extends PageBase {
         }
     }
 
-    public void verifyLoginValidations(String userName, String password) {
+    public void LoginValidations(String userName, String password) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.findElement(By.id("user-name")).sendKeys(userName);
         driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.id("login-button")).click();
         if ("".equals(userName)) {
             System.out.println("UserName is empty: " + userName.isEmpty());
         }else if ("".equals(password)) {
             System.out.println("Password is empty: " + password.isEmpty());
         }
+
     }
 
     public void loginWithInvalidUsername() {
@@ -176,7 +183,26 @@ public class LoginPage extends PageBase {
 
     }
 
+    public void verifyUsernameIsNotEntered() throws IOException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
+        System.out.println("Error: " + errorMessageContainer.isDisplayed());
 
+        if (errorMessageContainer.isDisplayed()) {
+            Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Username is required", "Error message does not match!");
+            try {
+                takeAScreenShot();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }else {
+            System.out.println("Error message container is not shown!");
+        }
+    }
+
+    public void verifyPasswordIsNotEntered() {
+
+    }
 
     public void takeAScreenShot() throws IOException {
         WebElement errorMessageElement = driver.findElement(By.className("error-message-container"));

@@ -53,29 +53,31 @@ public class LoginTest extends BaseTest {
     @Test(description = "Login with invalid username")
     public void login_with_invalid_username_test() {
         loginPage = new LoginPage(driver);
-        loginPage.verifyLoginValidations("invalid username", "secret_sauce");
+        loginPage.LoginValidations("invalid username", "secret_sauce");
     }
 
     @Test(description = "Login with invalid password")
     public void login_with_invalid_password_test() {
         loginPage = new LoginPage(driver);
-        loginPage.verifyLoginValidations("standard_user","invalid password");
+        loginPage.LoginValidations("standard_user","invalid password");
     }
 
     @Test(description = "Login with empty username field")
-    public void login_with_empty_username_field_test() {
+    public void login_with_empty_username_field_test() throws IOException {
         loginPage = new LoginPage(driver);
-        loginPage.verifyLoginValidations("", "secret_sauce");
+        loginPage.LoginValidations("", "secret_sauce");
+        loginPage.verifyUsernameIsNotEntered();
     }
+
     @Test(description = "Login with empty password field")
     public void login_with_empty_password_field_test() {
         loginPage = new LoginPage(driver);
-        loginPage.verifyLoginValidations("standard_user", "");
+        loginPage.LoginValidations("standard_user", "");
     }
     @Test(description = "Login with empty username and password fields")
     public void login_with_empty_username_and_password_fields_test() {
         loginPage = new LoginPage(driver);
-        loginPage.verifyLoginValidations("", "");
+        loginPage.LoginValidations("", "");
     }
 
     @Test(description = "test verifying login page")
