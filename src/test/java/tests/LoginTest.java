@@ -86,7 +86,7 @@ public class LoginTest extends BaseTest {
         loginPage.verifyLoginPage();
         loginPage.loginLockedOutUser("locked_out_user");
         loginPage.verifyLockedOutUserErrorMessages();
-        loginPage.takeAScreenShot();
+        loginPage.takeAScreenShotOfLoginBox();
         loginPage.takeFullScreenPageScreenShot();
     }
 

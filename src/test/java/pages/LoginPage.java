@@ -192,39 +192,13 @@ public class LoginPage extends PageBase {
     public void verifyUsernameIsNotEntered() throws IOException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
-        System.out.println("Error: " + errorMessageContainer.isDisplayed());
-
         if (errorMessageContainer.isDisplayed()) {
             Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Username is required", "Error message does not match!");
-                takeAScreenShot();
+            takeAScreenShotOfLoginBox();
         }else {
             System.out.println("Error message container is not shown!");
         }
     }
 
-    public void verifyPasswordIsNotEntered() {
-
-    }
-
-    public void takeAScreenShot() throws IOException {
-        WebElement errorMessageElement = driver.findElement(By.className("error-message-container"));
-        File source = errorMessageElement.getScreenshotAs(OutputType.FILE);
-        File destination = new File("resources/screenshots/Error Message Element.png");
-        FileHandler.copy(source,destination);
-    }
-
-    public void takeFullScreenPageScreenShot() throws IOException {
-        WebElement errorMessageElement = driver.findElement(By.id("root"));
-        File source = errorMessageElement.getScreenshotAs(OutputType.FILE);
-        File destination = new File("resources/screenshots/Full Page.png");
-        FileHandler.copy(source,destination);
-    }
-
-    public void verifyLockedOutUserErrorMessages() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement errorMessageContainer = driver.findElement(By.className("error-message-container"));
-        wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
-        Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Sorry, this user has been locked out.", "Error message do not match!");
-    }
 
 }
