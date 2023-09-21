@@ -7,9 +7,9 @@ import pages.LoginPage;
 
 import java.io.IOException;
 
-public class LoginTest extends BaseTest {
+public class login_tests extends BaseTest {
 
-    public LoginTest() {
+    public login_tests() {
         super();
     }
 
@@ -86,17 +86,8 @@ public class LoginTest extends BaseTest {
         loginPage.verifyLoginPage();
         loginPage.loginLockedOutUser("locked_out_user");
         loginPage.verifyLockedOutUserErrorMessages();
-        loginPage.takeAScreenShot();
+        loginPage.takeAScreenShotOfLoginBox();
         loginPage.takeFullScreenPageScreenShot();
     }
 
-    @Test
-    public void verifyHomePage() {
-        loginPage = new LoginPage(driver);
-        loginPage.verifyLoginPage();
-        loginPage.loginStandardUser("standard_user");
-        homePage = new HomePage(driver);
-        homePage.verifyHomePage();
-        homePage.addBackpackToCart();
-    }
 }
