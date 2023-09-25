@@ -37,7 +37,8 @@ public class HomePage extends PageBase {
     private WebElement shoppingCartContainer;
 
     @FindBy (xpath = "//span[@class='shopping_cart_badge']")
-    private WebElement shoppingCartBadge;
+    public static WebElement shoppingCartBadge;
+
     @FindBy (id = "add-to-cart-sauce-labs-backpack")
     private WebElement addBackpackToCart;
 
