@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "shopping__cart",
-    "last_opened_file_path": "C:/Users/Dusko-PC/IdeaProjects/SwagLabsProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "selenium.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shopping__cart&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dusko-PC/IdeaProjects/AleaGameManagmentSystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources\test_cases" />
@@ -66,12 +67,30 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.login_tests">
+  <component name="RunManager" selected="TestNG.home_page_tests.verify_home_page_test">
+    <configuration name="home_page_tests.verify_home_page_test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.home_page_tests" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.home_page_tests" />
+      <option name="METHOD_NAME" value="verify_home_page_test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="login_tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.home_page_tests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,7 +107,7 @@
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.home_page_tests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,7 +125,7 @@
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.home_page_tests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,29 +139,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login_tests.login_with_locked_out_user_test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.login_tests" />
-      <option name="METHOD_NAME" value="login_with_locked_out_user_test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="login_tests.verify_login_page_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="tests.home_page_tests" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.home_page_tests.verify_home_page_test" />
         <item itemvalue="TestNG.login_tests" />
         <item itemvalue="TestNG.login_tests.login_with_empty_username_field_test" />
         <item itemvalue="TestNG.login_tests.verify_login_page_test" />
         <item itemvalue="TestNG.login_tests.login_with_empty_password_field_test" />
-        <item itemvalue="TestNG.login_tests.login_with_locked_out_user_test" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +184,8 @@
       <workItem from="1695296482968" duration="1622000" />
       <workItem from="1695381227129" duration="2714000" />
       <workItem from="1695570714834" duration="2562000" />
+      <workItem from="1695633361289" duration="805000" />
+      <workItem from="1695650619833" duration="748000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
@@ -239,6 +242,17 @@
     <MESSAGE value="Added new methods for verifying invalid login credentials" />
     <MESSAGE value="Added PageFactory initialization into PageBase, and some more improvements" />
     <option name="LAST_COMMIT_MESSAGE" value="Added PageFactory initialization into PageBase, and some more improvements" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/home_page_tests.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -68,9 +68,10 @@ public class ShoppingCart extends PageBase {
     public void countItemsInCart() {
         List <WebElement> items = driver.findElements(By.className("cart_item"));
         int itemsInCart = items.size();
-
-        if (itemsInCart == HomePage.shoppingCartBadge) {
-
-        }
+//        int
+//
+//        if (itemsInCart == HomePage.shoppingCartBadge) {
+//
+//        }
     }
 }
