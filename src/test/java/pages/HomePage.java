@@ -42,8 +42,11 @@ public class HomePage extends PageBase {
     @FindBy (id = "add-to-cart-sauce-labs-backpack")
     private WebElement addBackpackToCart;
 
-    @FindBy (id = "'remove-sauce-labs-backpack")
+    @FindBy (id = "remove-sauce-labs-backpack")
     private WebElement removeBackpackFromCart;
+
+    @FindBy (id = "react-burger-menu-btn")
+    private WebElement hamburgerMenuButton;
 
     public void verifyHomePage() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -80,12 +83,17 @@ public class HomePage extends PageBase {
     }
 
     public void verifyShoppingCartBadge() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         if (shoppingCartBadge.isDisplayed()){
             String itemsInTheCart = shoppingCartBadge.getText();
             System.out.println("You have" + itemsInTheCart + "items is in the cart!");
         } else {
             System.out.println("Your item is not in the cart, please add item to cart!");
         }
+    }
+
+    public void openTheHamburgerMenu() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenuButton));
+        hamburgerMenuButton.click();
     }
 }

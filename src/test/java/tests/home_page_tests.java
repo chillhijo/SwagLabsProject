@@ -18,6 +18,18 @@ public class home_page_tests extends BaseTest {
         homePage = new HomePage(driver);
         homePage.verifyHomePage();
         homePage.addBackpackToCart();
+        homePage.removeBackpackFromCart();
+        homePage.addBackpackToCart();
         homePage.openYourCart();
+    }
+
+    @Test (description = "Open the Hamburger menu")
+    public void open_the_hamburger_menu_test() {
+        loginPage = new LoginPage(driver);
+        loginPage.loginStandardUser("standard_user");
+
+        homePage = new HomePage(driver);
+        homePage.verifyHomePage();
+        homePage.openTheHamburgerMenu();
     }
 }
