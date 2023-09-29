@@ -31,5 +31,6 @@ public class home_page_tests extends BaseTest {
         homePage = new HomePage(driver);
         homePage.verifyHomePage();
         homePage.openTheHamburgerMenu();
+        homePage.getHamburgerMenuElementsText();
     }
 }

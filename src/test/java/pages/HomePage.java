@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class HomePage extends PageBase {
     public HomePage(WebDriver driver) {
@@ -47,6 +48,9 @@ public class HomePage extends PageBase {
 
     @FindBy (id = "react-burger-menu-btn")
     private WebElement hamburgerMenuButton;
+
+    @FindBy (className = "bm-item-list")
+    private WebElement hamburgerMenuNavList;
 
     public void verifyHomePage() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -95,5 +99,23 @@ public class HomePage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenuButton));
         hamburgerMenuButton.click();
+    }
+
+    public void getHamburgerMenuElementsText() {
+        List<WebElement> navElements = hamburgerMenuNavList.findElements(By.tagName("a"));
+
+        String[] navElementsText = new String[navElements.size()];
+
+        for (int i = 0; i < navElements.size(); i++) {
+            navElementsText[i] = navElements.get(i).getText();
+        }
+        for (String elementText : navElementsText) {
+            System.out.println(elementText);
+        }
+
+        Assert.assertEquals(navElementsText[0], "All Items", "Text does not match");
+        Assert.assertEquals(navElementsText[1], "About", "Text does not match");
+        Assert.assertEquals(navElementsText[2], "Logout", "Text does not match");
+        Assert.assertEquals(navElementsText[3], "Reset App State", "Text does not match");
     }
 }
