@@ -46,7 +46,8 @@ public class PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement errorMessageContainer = driver.findElement(By.className("error-message-container"));
         wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
-        Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Sorry, this user has been locked out.", "Error message do not match!");
+        Assert.assertEquals(errorMessageContainer.getText(),
+                "Epic sadface: Sorry, this user has been locked out.",
+                "Error message do not match!");
     }
-
 }

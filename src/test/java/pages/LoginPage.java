@@ -50,21 +50,26 @@ public class LoginPage extends PageBase {
         Assert.assertEquals(ActualTitle, ExpectedTitle);
         System.out.println(ActualTitle);
 
-//        WebElement loginLogo = driver.findElement(By.className("login_logo"));
         wait.until(ExpectedConditions.visibilityOf(loginLogo));
-        Assert.assertEquals(loginLogo.getText(), "Swag Labs", "Header title not matching!");
+        Assert.assertEquals(loginLogo.getText(),
+                "Swag Labs",
+                "Header title not matching!");
 
-//        WebElement usernameInputBox = driver.findElement(By.id("user-name"));
         wait.until(ExpectedConditions.visibilityOf(usernameInputBox));
-        Assert.assertEquals(usernameInputBox.getAttribute("placeholder"), "Username", "Username placeholder is not matching!");
+        Assert.assertEquals(usernameInputBox.getAttribute("placeholder"),
+                "Username",
+                "Username placeholder is not matching!");
 
-//        WebElement passwordInputBox = driver.findElement(By.id("password"));
         wait.until(ExpectedConditions.visibilityOf(passwordInputBox));
-        Assert.assertEquals(passwordInputBox.getAttribute("placeholder"), "Password", "Password placeholder is not matching!");
+        Assert.assertEquals(passwordInputBox.getAttribute("placeholder"),
+                "Password",
+                "Password placeholder is not matching!");
 
-//        WebElement loginButton = driver.findElement(By.id("login-button"));
+
         wait.until(ExpectedConditions.visibilityOf(loginButton));
-        Assert.assertEquals(loginButton.getAttribute("value"), "Login", "Login button value is not matching!");
+        Assert.assertEquals(loginButton.getAttribute("value"),
+                "Login",
+                "Login button value is not matching!");
 
         System.out.println("Login page is open and verified!");
     }
@@ -80,7 +85,9 @@ public class LoginPage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.visibilityOf(loginLogo));
-        Assert.assertEquals(loginLogo.getText(), "Swag Labs", "Header title not matching!");
+        Assert.assertEquals(loginLogo.getText(),
+                "Swag Labs",
+                "Header title not matching!");
         System.out.println("Login logo is correct and visible.");
     }
 
@@ -88,7 +95,9 @@ public class LoginPage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.elementToBeClickable(usernameInputBox));
-        Assert.assertEquals(usernameInputBox.getAttribute("placeholder"), "Username", "Username placeholder is not matching!");
+        Assert.assertEquals(usernameInputBox.getAttribute("placeholder"),
+                "Username",
+                "Username placeholder is not matching!");
         System.out.println("Username input box is clickable!");
     }
 
@@ -96,7 +105,9 @@ public class LoginPage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.elementToBeClickable(passwordInputBox));
-        Assert.assertEquals(passwordInputBox.getAttribute("placeholder"), "Password", "Password placeholder is not matching!");
+        Assert.assertEquals(passwordInputBox.getAttribute("placeholder"),
+                "Password",
+                "Password placeholder is not matching!");
         System.out.println("Password input box is clickable");
 
     }
@@ -105,7 +116,9 @@ public class LoginPage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
-        Assert.assertEquals(loginButton.getAttribute("value"), "Login", "Login button value is not matching!");
+        Assert.assertEquals(loginButton.getAttribute("value"),
+                "Login",
+                "Login button value is not matching!");
         System.out.println("Login button is clickable");
 
     }
@@ -193,7 +206,9 @@ public class LoginPage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(errorMessageContainer));
         if (errorMessageContainer.isDisplayed()) {
-            Assert.assertEquals(errorMessageContainer.getText(), "Epic sadface: Username is required", "Error message does not match!");
+            Assert.assertEquals(errorMessageContainer.getText(),
+                    "Epic sadface: Username is required",
+                    "Error message does not match!");
             takeAScreenShotOfLoginBox();
         }else {
             System.out.println("Error message container is not shown!");

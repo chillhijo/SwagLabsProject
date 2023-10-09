@@ -2,9 +2,7 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.ShoppingCart;
+import pages.*;
 
 public class e2e_test extends BaseTest {
 
@@ -20,5 +18,16 @@ public class e2e_test extends BaseTest {
         ShoppingCart shoppingCart = new ShoppingCart(driver);
         shoppingCart.clickCheckoutButton();
 
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.verifyCheckoutYourInformation();
+        checkoutPage.enterYourInformation();
+        checkoutPage.clickContinueAfterEnteringInfo();
+
+        OverviewPage overviewPage = new OverviewPage(driver);
+        overviewPage.verifyOverviewPage();
+        overviewPage.clickOnTheFinishButton();
+
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+        checkoutCompletePage.verifyCompleteOrderAndPage();
     }
 }

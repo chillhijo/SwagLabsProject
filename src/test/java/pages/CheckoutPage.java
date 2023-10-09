@@ -28,15 +28,25 @@ public class CheckoutPage extends PageBase {
     private WebElement yourInfoTitle;
 
     @FindBy (id = "continue")
-    private WebElement continueButton;
+    private WebElement continueButtonOnCheckoutPage;
 
-    public void checkoutYourInformation() {
+    @FindBy (id = "cancel")
+    private WebElement cancelButtonOnCheckoutPage;
+
+    public void verifyCheckoutYourInformation() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(yourInfoTitle));
 
-        Assert.assertEquals(firstNameInfo.getAttribute("placeholder"), "First Name", "Text doesnt match!");
-        Assert.assertEquals(lastNameInfo.getAttribute("placeholder"), "Last  Name", "Text doesnt match!");
-        Assert.assertEquals(postalCodeInfo.getAttribute("placeholder"), "Zip/Postal Code", "Text doesnt match!");
+        Assert.assertEquals(firstNameInfo.getAttribute("placeholder"),
+                "First Name",
+                "Text doesnt match!");
+        Assert.assertEquals(lastNameInfo.getAttribute("placeholder"),
+                "Last Name",
+                "Text doesnt match!");
+        Assert.assertEquals(postalCodeInfo.getAttribute("placeholder"),
+                "Zip/Postal Code",
+                "Text doesnt match!");
+        System.out.println("Your information page is verified");
     }
 
     public void enterYourInformation() {
@@ -45,11 +55,19 @@ public class CheckoutPage extends PageBase {
         firstNameInfo.sendKeys("Dusko");
         lastNameInfo.sendKeys("Pralica");
         postalCodeInfo.sendKeys("12345");
+        System.out.println("Your information's are entered.");
     }
 
     public void clickContinueAfterEnteringInfo() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(continueButton));
-        continueButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(continueButtonOnCheckoutPage));
+        continueButtonOnCheckoutPage.click();
+        System.out.println("Clicked on continue after entering your info.");
+    }
+
+    public void clickCancelAfterEnteringInfo() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(cancelButtonOnCheckoutPage));
+        cancelButtonOnCheckoutPage.click();
     }
 }

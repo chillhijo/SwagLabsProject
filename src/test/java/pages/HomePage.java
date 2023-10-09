@@ -72,6 +72,7 @@ public class HomePage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(addBackpackToCart));
         addBackpackToCart.click();
+        System.out.println("Backpack is added to cart");
     }
 
     public void removeBackpackFromCart() {
@@ -84,6 +85,7 @@ public class HomePage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(shoppingCartContainer));
         shoppingCartContainer.click();
+        System.out.println("Cart is open");
     }
 
     public void verifyShoppingCartBadge() {
@@ -103,19 +105,24 @@ public class HomePage extends PageBase {
 
     public void getHamburgerMenuElementsText() {
         List<WebElement> navElements = hamburgerMenuNavList.findElements(By.tagName("a"));
-
         String[] navElementsText = new String[navElements.size()];
-
         for (int i = 0; i < navElements.size(); i++) {
             navElementsText[i] = navElements.get(i).getText();
         }
         for (String elementText : navElementsText) {
             System.out.println(elementText);
         }
-
-        Assert.assertEquals(navElementsText[0], "All Items", "Text does not match");
-        Assert.assertEquals(navElementsText[1], "About", "Text does not match");
-        Assert.assertEquals(navElementsText[2], "Logout", "Text does not match");
-        Assert.assertEquals(navElementsText[3], "Reset App State", "Text does not match");
+        Assert.assertEquals(navElementsText[0],
+                "All Items",
+                "Text does not match");
+        Assert.assertEquals(navElementsText[1],
+                "About",
+                "Text does not match");
+        Assert.assertEquals(navElementsText[2],
+                "Logout",
+                "Text does not match");
+        Assert.assertEquals(navElementsText[3],
+                "Reset App State",
+                "Text does not match");
     }
 }
