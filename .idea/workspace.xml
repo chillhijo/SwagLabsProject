@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingCart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homepage&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shopping__cart&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Dusko-PC/IdeaProjects/AleaGameManagmentSystem&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -167,7 +166,7 @@
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastUrl" value="https://www.saucedemo.com/inventory.html" />
+    <option name="lastUrl" value="https://www.saucedemo.com/checkout-step-one.html" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,7 +186,8 @@
       <workItem from="1695650619833" duration="748000" />
       <workItem from="1695737805602" duration="601000" />
       <workItem from="1695906090171" duration="2627000" />
-      <workItem from="1695973613873" duration="1272000" />
+      <workItem from="1695973613873" duration="2024000" />
+      <workItem from="1696844404164" duration="2598000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
