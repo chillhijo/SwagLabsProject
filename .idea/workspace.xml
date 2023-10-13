@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutCompletePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutCompletePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/EndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/end_to_end_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/shopping_cart_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/shopping_cart_test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.home_page_tests.open_the_hamburger_menu_test002">
     <configuration name="e2e_test.e2e_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
@@ -123,6 +124,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="home_page_tests.open_the_hamburger_menu_test002" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.home_page_tests" />
+      <option name="METHOD_NAME" value="open_the_hamburger_menu_test002" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="home_page_tests.verify_home_page_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
@@ -141,30 +160,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login_tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.home_page_tests" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.login_tests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.home_page_tests.open_the_hamburger_menu_test002" />
         <item itemvalue="TestNG.end_to_end_test.e2e_test_001" />
         <item itemvalue="TestNG.e2e_test.e2e_test" />
         <item itemvalue="TestNG.home_page_tests.verify_home_page_test" />
         <item itemvalue="TestNG.home_page_tests.open_the_hamburger_menu_test" />
-        <item itemvalue="TestNG.login_tests" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +195,7 @@
       <workItem from="1696844404164" duration="7615000" />
       <workItem from="1697017576009" duration="6000" />
       <workItem from="1697021551326" duration="599000" />
-      <workItem from="1697201896963" duration="1546000" />
+      <workItem from="1697201896963" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />

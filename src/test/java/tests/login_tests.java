@@ -69,12 +69,13 @@ public class login_tests extends BaseTest {
     }
 
     @Test(description = "Login with empty password field")
-    public void login_with_empty_password_field_test010() {
+    public void login_with_empty_password_field_test009() {
         loginPage = new LoginPage(driver);
         loginPage.LoginValidations("standard_user", "");
     }
+
     @Test(description = "Login with empty username and password fields")
-    public void login_with_empty_username_and_password_fields_test011() {
+    public void login_with_empty_username_and_password_fields_test010() {
         loginPage = new LoginPage(driver);
         loginPage.LoginValidations("", "");
     }

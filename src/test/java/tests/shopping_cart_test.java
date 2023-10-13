@@ -17,6 +17,5 @@ public class shopping_cart_test extends BaseTest {
 
     @Test
     public void continue_shopping_test002() {
-        shoppingCart.
     }
 }
