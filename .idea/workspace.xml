@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/home_page_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutCompletePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutCompletePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/e2e_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/EndToEndTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +47,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homepage&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shopping__cart&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Dusko-PC/IdeaProjects/AleaGameManagmentSystem&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -66,7 +68,43 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.home_page_tests.open_the_hamburger_menu_test">
+  <component name="RunManager" selected="TestNG.EndToEndTest.e2e_test_001">
+    <configuration name="EndToEndTest.e2e_test_001" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.EndToEndTest" />
+      <option name="METHOD_NAME" value="e2e_test_001" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="e2e_test.e2e_test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.e2e_test" />
+      <option name="METHOD_NAME" value="e2e_test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="home_page_tests.open_the_hamburger_menu_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
@@ -120,54 +158,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login_tests.login_with_empty_username_field_test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.home_page_tests" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.login_tests" />
-      <option name="METHOD_NAME" value="login_with_empty_username_field_test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login_tests.verify_login_page_test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.home_page_tests" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.login_tests" />
-      <option name="METHOD_NAME" value="verify_login_page_test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.home_page_tests.open_the_hamburger_menu_test" />
+        <item itemvalue="TestNG.EndToEndTest.e2e_test_001" />
+        <item itemvalue="TestNG.e2e_test.e2e_test" />
         <item itemvalue="TestNG.home_page_tests.verify_home_page_test" />
+        <item itemvalue="TestNG.home_page_tests.open_the_hamburger_menu_test" />
         <item itemvalue="TestNG.login_tests" />
-        <item itemvalue="TestNG.login_tests.login_with_empty_username_field_test" />
-        <item itemvalue="TestNG.login_tests.verify_login_page_test" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastUrl" value="https://www.saucedemo.com/inventory.html" />
+    <option name="lastUrl" value="https://www.saucedemo.com/checkout-step-one.html" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,7 +189,11 @@
       <workItem from="1695650619833" duration="748000" />
       <workItem from="1695737805602" duration="601000" />
       <workItem from="1695906090171" duration="2627000" />
-      <workItem from="1695973613873" duration="1272000" />
+      <workItem from="1695973613873" duration="2024000" />
+      <workItem from="1696844404164" duration="7615000" />
+      <workItem from="1697017576009" duration="6000" />
+      <workItem from="1697021551326" duration="599000" />
+      <workItem from="1697201896963" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />

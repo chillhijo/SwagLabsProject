@@ -4,6 +4,7 @@ import base.BaseTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.ShoppingCart;
 
 public class home_page_tests extends BaseTest {
 
@@ -21,6 +22,9 @@ public class home_page_tests extends BaseTest {
         homePage.removeBackpackFromCart();
         homePage.addBackpackToCart();
         homePage.openYourCart();
+
+        ShoppingCart shoppingCart = new ShoppingCart(driver);
+
     }
 
     @Test (description = "Open the Hamburger menu")

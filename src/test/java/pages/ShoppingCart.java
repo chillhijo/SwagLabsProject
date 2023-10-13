@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart extends PageBase {
@@ -36,17 +37,25 @@ public class ShoppingCart extends PageBase {
     @FindBy (id = "checkout")
     private WebElement checkoutButton;
 
+
     // Methods
     public void verifyShoppingPage() {
         WebDriverWait wait  = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         String expectedUrl = "https://www.saucedemo.com/cart.html";
         String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl, "Shopping cart url does not match!");
+        Assert.assertEquals(actualUrl, expectedUrl,
+                "Shopping cart url does not match!");
 
-        Assert.assertEquals(shoppingCartTitleUnderHamburgerMenu.getText(), "Your Cart", "Shopping cart title does not match!");
-        Assert.assertEquals(cartQuantityLabel.getText(), "QTY", "Cart quantity label text does not match!");
-        Assert.assertEquals(cartDescLabel.getText(), "Description", "Cart description text does not match!");
+        Assert.assertEquals(shoppingCartTitleUnderHamburgerMenu.getText(),
+                "Your Cart",
+                "Shopping cart title does not match!");
+        Assert.assertEquals(cartQuantityLabel.getText(),
+                "QTY",
+                "Cart quantity label text does not match!");
+        Assert.assertEquals(cartDescLabel.getText(),
+                "Description",
+                "Cart description text does not match!");
 
         wait.until(ExpectedConditions.visibilityOfAllElements(cartQuantityLabel, cartDescLabel));
         wait.until(ExpectedConditions.elementToBeClickable(continueShoppingButton));
@@ -63,6 +72,7 @@ public class ShoppingCart extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(checkoutButton));
         checkoutButton.click();
+        System.out.println("Checkout Button is clicked");
     }
 
     public void countItemsInCart() {
