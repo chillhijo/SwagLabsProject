@@ -2,7 +2,6 @@ package tests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
-import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ public class login_tests extends BaseTest {
     }
 
     LoginPage loginPage;
-    HomePage homePage;
+
 
     @Test(description = "Verify Login page", priority = 1)
     public void verify_login_page_test() {
