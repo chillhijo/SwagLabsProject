@@ -1,5 +1,6 @@
 package pages;
 
+import base.BaseTest;
 import base.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class CheckoutCompletePage extends PageBase {
@@ -23,6 +25,9 @@ public class CheckoutCompletePage extends PageBase {
 
     @FindBy (className = "complete-header")
     private WebElement completeHeaderConfirmationText;
+
+    @FindBy (id = "checkout_complete_container")
+    private WebElement completedPurchaseContainer;
 
 
     public void verifyCompleteOrderAndPage() {
@@ -40,7 +45,8 @@ public class CheckoutCompletePage extends PageBase {
         System.out.println("Order completed!");
     }
 
-    public void takeAScreenShotOfCompletedOrder() {
-
+    public void takeAScreenShotOfCompletedOrder() throws IOException {
+        PageBase pageBase = new PageBase(driver);
+        pageBase.takeAScreenShotOfAWantedElement(completedPurchaseContainer);
     }
 }

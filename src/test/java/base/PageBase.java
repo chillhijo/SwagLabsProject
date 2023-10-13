@@ -50,4 +50,13 @@ public class PageBase {
                 "Epic sadface: Sorry, this user has been locked out.",
                 "Error message do not match!");
     }
+
+    public void takeAScreenShotOfAWantedElement(WebElement element) throws IOException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+        File source = element.getScreenshotAs(OutputType.FILE);
+        File destination = new File(
+                "resources/screenshots/completedPurchase/Completed Purchase.png");
+        FileHandler.copy(source,destination);
+    }
 }

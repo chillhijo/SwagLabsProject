@@ -4,10 +4,12 @@ import base.BaseTest;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class e2e_test extends BaseTest {
+import java.io.IOException;
+
+public class EndToEndTest extends BaseTest {
 
     @Test
-    public void e2e_test() {
+    public void e2e_test_001() throws IOException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginStandardUser("standard_user");
 
@@ -29,5 +31,6 @@ public class e2e_test extends BaseTest {
 
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
         checkoutCompletePage.verifyCompleteOrderAndPage();
+        checkoutCompletePage.takeAScreenShotOfCompletedOrder();
     }
 }
