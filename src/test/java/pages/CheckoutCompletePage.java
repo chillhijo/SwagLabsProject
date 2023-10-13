@@ -49,4 +49,10 @@ public class CheckoutCompletePage extends PageBase {
         PageBase pageBase = new PageBase(driver);
         pageBase.takeAScreenShotOfAWantedElement(completedPurchaseContainer);
     }
+
+    public void backHomeToContinueShopping() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(backHomeButton));
+        backHomeButton.click();
+    }
 }

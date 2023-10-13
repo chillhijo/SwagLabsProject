@@ -6,7 +6,7 @@ import pages.*;
 
 import java.io.IOException;
 
-public class EndToEndTest extends BaseTest {
+public class end_to_end_test extends BaseTest {
 
     @Test
     public void e2e_test_001() throws IOException {

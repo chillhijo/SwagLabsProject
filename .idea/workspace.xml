@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/CheckoutCompletePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CheckoutCompletePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/e2e_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/EndToEndTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/EndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/end_to_end_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,25 +68,7 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.EndToEndTest.e2e_test_001">
-    <configuration name="EndToEndTest.e2e_test_001" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.EndToEndTest" />
-      <option name="METHOD_NAME" value="e2e_test_001" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="e2e_test.e2e_test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
@@ -98,6 +80,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.e2e_test" />
       <option name="METHOD_NAME" value="e2e_test" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="end_to_end_test.e2e_test_001" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.end_to_end_test" />
+      <option name="METHOD_NAME" value="e2e_test_001" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -160,7 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.EndToEndTest.e2e_test_001" />
+        <item itemvalue="TestNG.end_to_end_test.e2e_test_001" />
         <item itemvalue="TestNG.e2e_test.e2e_test" />
         <item itemvalue="TestNG.home_page_tests.verify_home_page_test" />
         <item itemvalue="TestNG.home_page_tests.open_the_hamburger_menu_test" />
@@ -193,7 +193,7 @@
       <workItem from="1696844404164" duration="7615000" />
       <workItem from="1697017576009" duration="6000" />
       <workItem from="1697021551326" duration="599000" />
-      <workItem from="1697201896963" duration="688000" />
+      <workItem from="1697201896963" duration="1546000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
