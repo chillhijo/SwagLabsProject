@@ -9,9 +9,9 @@ import java.time.Duration;
 
 public class shopping_cart_test extends BaseTest {
 
-    ShoppingCart shoppingCart;
     @Test
     public void verify_shopping_cart_test001() {
+        ShoppingCart shoppingCart = new ShoppingCart(driver);
         shoppingCart.verifyShoppingPage();
     }
 
