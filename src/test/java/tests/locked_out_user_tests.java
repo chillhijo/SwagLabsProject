@@ -24,6 +24,8 @@ public class locked_out_user_tests extends BaseTest {
         loginPage.verifyLockedOutUserErrorMessages();
     }
 
+
+
     @Test
     public void login_with_locked_out_user() throws InterruptedException, IOException {
         LoginPage loginPage = new LoginPage(driver);
