@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements" />
+    <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/locked_out_user_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/locked_out_user_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,12 +49,13 @@
     "TestNG.end_to_end_test.e2e_test_001.executor": "Run",
     "TestNG.home_page_tests.verify_home_page_test001.executor": "Run",
     "TestNG.locked_out_user_tests.executor": "Run",
+    "TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot.executor": "Run",
     "TestNG.locked_out_user_tests.login_with_locked_out_user.executor": "Run",
     "TestNG.login_tests.executor": "Run",
     "TestNG.login_tests.login_with_locked_out_user_test003.executor": "Run",
     "TestNG.shopping_cart_test.verify_shopping_cart_test001.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "problem__user",
+    "git-widget-placeholder": "shopping__cart",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Dusko-PC/AquaProjects/Slots",
     "node.js.detected.package.eslint": "true",
@@ -206,7 +212,7 @@
       <workItem from="1701464418591" duration="3356000" />
       <workItem from="1702376932690" duration="7000" />
       <workItem from="1702383485263" duration="6186000" />
-      <workItem from="1702463476845" duration="6091000" />
+      <workItem from="1702463476845" duration="6961000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
