@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/locked_out_user_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/locked_out_user_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProblemUserLoged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProblemUserLoged.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,9 +52,10 @@
     "TestNG.locked_out_user_tests.login_with_locked_out_user.executor": "Run",
     "TestNG.login_tests.executor": "Run",
     "TestNG.login_tests.login_with_locked_out_user_test003.executor": "Run",
+    "TestNG.problem_user_tests.verifySauceLabsBackpack.executor": "Run",
     "TestNG.shopping_cart_test.verify_shopping_cart_test001.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "shopping__cart",
+    "git-widget-placeholder": "problem__user",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Dusko-PC/AquaProjects/Slots",
     "node.js.detected.package.eslint": "true",
@@ -77,7 +77,7 @@
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot">
+  <component name="RunManager" selected="TestNG.problem_user_tests.verifySauceLabsBackpack">
     <configuration name="home_page_tests.verify_home_page_test001" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
@@ -149,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="login_tests.login_with_locked_out_user_test003" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="problem_user_tests.verifySauceLabsBackpack" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
@@ -158,8 +158,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.login_tests" />
-      <option name="METHOD_NAME" value="login_with_locked_out_user_test003" />
+      <option name="MAIN_CLASS_NAME" value="tests.problem_user_tests" />
+      <option name="METHOD_NAME" value="verifySauceLabsBackpack" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -169,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.problem_user_tests.verifySauceLabsBackpack" />
         <item itemvalue="TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot" />
         <item itemvalue="TestNG.locked_out_user_tests.login_with_locked_out_user" />
         <item itemvalue="TestNG.locked_out_user_tests" />
         <item itemvalue="TestNG.home_page_tests.verify_home_page_test001" />
-        <item itemvalue="TestNG.login_tests.login_with_locked_out_user_test003" />
       </list>
     </recent_temporary>
   </component>
