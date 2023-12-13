@@ -75,6 +75,12 @@ public class HomePage extends PageBase {
         System.out.println("Backpack is added to cart");
     }
 
+    public void verifyBackpackAddedToTheCart() {
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(removeBackpackFromCart));
+        System.out.println("Backpack is added to cart and you can remove it if you want");
+    }
+
     public void removeBackpackFromCart() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(removeBackpackFromCart));
@@ -103,7 +109,9 @@ public class HomePage extends PageBase {
         hamburgerMenuButton.click();
     }
 
-    public void getHamburgerMenuElementsText() {
+    public void verifyHamburgerMenuElementsText() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(hamburgerMenuNavList));
         List<WebElement> navElements = hamburgerMenuNavList.findElements(By.tagName("a"));
         String[] navElementsText = new String[navElements.size()];
         for (int i = 0; i < navElements.size(); i++) {

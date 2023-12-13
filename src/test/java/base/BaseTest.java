@@ -28,7 +28,7 @@ public class BaseTest {
         } else if (browser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
-//            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
             driver = new ChromeDriver(options);
