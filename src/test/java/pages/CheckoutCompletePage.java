@@ -29,6 +29,8 @@ public class CheckoutCompletePage extends PageBase {
     @FindBy (id = "checkout_complete_container")
     private WebElement completedPurchaseContainer;
 
+    String completedPurchaseFilePath = "resources/screenshots/completedPurchase";
+    String fileName = "Completed Purchase";
 
     public void verifyCompleteOrderAndPage() {
         String actualUrl = driver.getCurrentUrl();
@@ -47,7 +49,7 @@ public class CheckoutCompletePage extends PageBase {
 
     public void takeAScreenShotOfCompletedOrder() throws IOException {
         PageBase pageBase = new PageBase(driver);
-        pageBase.takeAScreenShotOfAWantedElement(completedPurchaseContainer);
+        pageBase.takeAScreenShotOfAWantedElement(completedPurchaseContainer, completedPurchaseFilePath, fileName);
     }
 
     public void backHomeToContinueShopping() {

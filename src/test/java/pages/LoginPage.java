@@ -42,6 +42,10 @@ public class LoginPage extends PageBase {
     private WebElement errorMessageContainer;
     //VERIFY METHODS
 
+    /*
+    verifyLoginPage method is valid but I split it up in multiple methods
+    for better performance and better usage
+     */
     public void verifyLoginPage(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
