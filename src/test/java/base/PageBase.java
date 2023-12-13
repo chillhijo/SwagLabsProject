@@ -59,17 +59,13 @@ public class PageBase {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
 
-        // Use folderPath to construct the destination folder
         File destinationFolder = new File(folderPath);
 
-        // Check if the destination folder exists, if not, create it
         if (!destinationFolder.exists()) {
             destinationFolder.mkdirs();
         }
 
-        // Use fileName to construct the destination file path within the folder
         File destination = new File(destinationFolder, fileName);
-
         File source = element.getScreenshotAs(OutputType.FILE);
         FileHandler.copy(source, destination);
     }
