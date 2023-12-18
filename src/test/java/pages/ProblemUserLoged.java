@@ -1,26 +1,48 @@
 package pages;
 
 import base.PageBase;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.lang.reflect.Array;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProblemUserLoged extends PageBase {
     public ProblemUserLoged(WebDriver driver) {
         super(driver);
     }
     @FindBy(xpath = "//img[@alt='Sauce Labs Backpack']")
-    private WebElement sauceLabsBackpack;
+    private WebElement sauceLabsBackpackImg;
     @FindBy(xpath = "//img[@alt='Sauce Labs Bike Light']")
-    private WebElement sauceLabsBikeLight;
+    private WebElement sauceLabsBikeLightImg;
     @FindBy(xpath = "//img[@alt='Sauce Labs Bolt T-Shirt']")
-    private WebElement sauceLabsBoltTShirt;
+    private WebElement sauceLabsBoltTShirtImg;
     @FindBy(xpath = "//img[@alt='Sauce Labs Fleece Jacket']")
-    private WebElement sauceLabsFleeceJacket;
+    private WebElement sauceLabsFleeceJacketImg;
     @FindBy(xpath = "//img[@alt='Sauce Labs Onesie']")
-    private WebElement sauceLabsOnesie;
+    private WebElement sauceLabsOnesieImg;
     @FindBy(xpath = "//img[@alt='Test.allTheThings() T-Shirt (Red)']")
-    private WebElement sauceLabsTShirt;
+    private WebElement sauceLabsTShirtImg;
+    @FindBy(id = "//a[@id='item_4_title_link']")
+    private WebElement sauceLabsBackpackName;
+    @FindBy(id = "//a[@id='item_4_title_link']")
+    private WebElement sauceLabsBikeLightName;
+    @FindBy(id = "//a[@id='item_4_title_link']")
+    private WebElement sauceLabsBoltTShirtName;
+    @FindBy(id = "//a[@id='item_4_title_link']")
+    private WebElement sauceLabsFleeceName;
+    @FindBy(id = "//a[@id='item_4_title_link']")
+    private WebElement sauceLabsOnesieName;
+    @FindBy(id = "//a[@id='item_4_title_link']")
+    private WebElement sauceLabsTShirtName;
+
 
     String sauceLabsBackpackImgURL = "https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg";
     String sauceLabsBikeLightImgURL = "https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg";
@@ -29,21 +51,40 @@ public class ProblemUserLoged extends PageBase {
     String sauceLabsOnesieImgURL = "https://www.saucedemo.com/static/media/red-onesie-1200x1500.2ec615b2.jpg";
     String sauceLabsTShirtImgURL = "https://www.saucedemo.com/static/media/red-tatt-1200x1500.30dadef4.jpg";
 
-    public void getSrc() {
-
-        sauceLabsBackpackImgURL = sauceLabsBackpack.getAttribute("src");
-        sauceLabsBikeLightImgURL = sauceLabsBikeLight.getAttribute("src");
-        sauceLabsBoltTShirtImgURL = sauceLabsBoltTShirt.getAttribute("src");
-        sauceLabsFleeceJacketImgURL = sauceLabsFleeceJacket.getAttribute("src");
-        sauceLabsOnesieImgURL = sauceLabsOnesie.getAttribute("src");
-        sauceLabsTShirtImgURL = sauceLabsTShirt.getAttribute("src");
-
-        // Now, you can use these URL strings as needed
-        System.out.println("Backpack Image URL: " + sauceLabsBackpackImgURL);
-        System.out.println("Bike Light Image URL: " + sauceLabsBikeLightImgURL);
-        System.out.println("Bolt T-Shirt Image URL: " + sauceLabsBoltTShirtImgURL);
-        System.out.println("Fleece Jacket Image URL: " + sauceLabsFleeceJacketImgURL);
-        System.out.println("Onesie Image URL: " + sauceLabsOnesieImgURL);
-        System.out.println("T-Shirt Image URL: " + sauceLabsTShirtImgURL);
+    public void validateSrcOfProductImages() {
+        visibleAndGetSrc(sauceLabsBackpackImg, sauceLabsBackpackImgURL);
+        visibleAndGetSrc(sauceLabsBikeLightImg, sauceLabsBikeLightImgURL);
+        visibleAndGetSrc(sauceLabsBoltTShirtImg, sauceLabsBoltTShirtImgURL);
+        visibleAndGetSrc(sauceLabsFleeceJacketImg, sauceLabsFleeceJacketImgURL);
+        visibleAndGetSrc(sauceLabsOnesieImg, sauceLabsOnesieImgURL);
+        visibleAndGetSrc(sauceLabsTShirtImg, sauceLabsTShirtImgURL);
     }
+
+    public void validateShownAndActualProducts() {
+        List<WebElement> products = driver.findElements(By.className("inventory_item_name"));
+        List<String> productsName = new ArrayList<>();
+
+        for (WebElement product : products) {
+            productsName.add(product.getText());
+        }
+
+    }
+
+    public ArrayList<String> productName() {
+
+    }
+    public void getShownProductInfo() {
+        ArrayList<String> shownNames = new ArrayList<>();
+        for (WebElement element : productElement) {
+
+        }
+    }
+
+    public void visibleAndGetSrc(WebElement element, String expectedSrc) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(element));
+        Assert.assertEquals(element.getAttribute("src"), expectedSrc, "URL doesn't match");
+    }
+
+
 }

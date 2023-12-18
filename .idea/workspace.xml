@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProblemUserLoged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProblemUserLoged.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" afterDir="false" />
     </list>
@@ -41,35 +42,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.end_to_end_test.e2e_test_001.executor": "Run",
-    "TestNG.home_page_tests.verify_home_page_test001.executor": "Run",
-    "TestNG.locked_out_user_tests.executor": "Run",
-    "TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot.executor": "Run",
-    "TestNG.locked_out_user_tests.login_with_locked_out_user.executor": "Run",
-    "TestNG.login_tests.executor": "Run",
-    "TestNG.login_tests.login_with_locked_out_user_test003.executor": "Run",
-    "TestNG.problem_user_tests.verifySauceLabsBackpack.executor": "Run",
-    "TestNG.shopping_cart_test.verify_shopping_cart_test001.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "problem__user",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Dusko-PC/AquaProjects/Slots",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "selenium.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.end_to_end_test.e2e_test_001.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.home_page_tests.verify_home_page_test001.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.locked_out_user_tests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.locked_out_user_tests.login_with_locked_out_user.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.login_tests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.login_tests.login_with_locked_out_user_test003.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.problem_user_tests.verifySauceLabsBackpack.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.shopping_cart_test.verify_shopping_cart_test001.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;problem__user&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dusko-PC/AquaProjects/Slots&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources\test_cases" />
@@ -213,6 +214,9 @@
       <workItem from="1702376932690" duration="7000" />
       <workItem from="1702383485263" duration="6186000" />
       <workItem from="1702463476845" duration="6961000" />
+      <workItem from="1702482571380" duration="29000" />
+      <workItem from="1702568230385" duration="506000" />
+      <workItem from="1702624548858" duration="5299000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />

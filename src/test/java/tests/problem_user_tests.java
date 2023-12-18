@@ -18,6 +18,6 @@ public class problem_user_tests extends BaseTest {
         HomePage homePage = new HomePage(driver);
         homePage.verifyHomePage();
         ProblemUserLoged problemUserLoged = new ProblemUserLoged(driver);
-        problemUserLoged.getSrc();
+        problemUserLoged.validateSrcOfProductImages();
     }
 }
