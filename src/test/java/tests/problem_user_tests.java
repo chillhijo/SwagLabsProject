@@ -11,13 +11,13 @@ import pages.ProblemUserLoged;
 public class problem_user_tests extends BaseTest {
 
     @Test
-    public void verifySauceLabsBackpack() {
+    public void verifySauceLabsBackpack() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.verifyLoginPage();
-        loginPage.loginStandardUser("standard_user");
+        loginPage.loginProblemUser("problem_user");
         HomePage homePage = new HomePage(driver);
         homePage.verifyHomePage();
         ProblemUserLoged problemUserLoged = new ProblemUserLoged(driver);
-        problemUserLoged.validateSrcOfProductImages();
+        problemUserLoged.verifyProductNames();
     }
 }

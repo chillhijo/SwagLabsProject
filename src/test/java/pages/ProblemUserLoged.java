@@ -43,6 +43,11 @@ public class ProblemUserLoged extends PageBase {
     @FindBy(id = "//a[@id='item_4_title_link']")
     private WebElement sauceLabsTShirtName;
 
+    @FindBy(className = "inventory_details_name")
+    private WebElement productName;
+    @FindBy(id = "back-to-products")
+    private WebElement backToProductsButton;
+
 
     String sauceLabsBackpackImgURL = "https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg";
     String sauceLabsBikeLightImgURL = "https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg";
@@ -60,31 +65,89 @@ public class ProblemUserLoged extends PageBase {
         visibleAndGetSrc(sauceLabsTShirtImg, sauceLabsTShirtImgURL);
     }
 
-    public void validateShownAndActualProducts() {
-        List<WebElement> products = driver.findElements(By.className("inventory_item_name"));
-        List<String> productsName = new ArrayList<>();
+    public void verifyProductNames() throws InterruptedException {
+        List<String> shownNames = getShownProductName();
+        List<String> actualNames = getActualNames();
 
-        for (WebElement product : products) {
-            productsName.add(product.getText());
+        compareLists(shownNames, actualNames);
+    }
+
+    private List<WebElement> shownElements() {
+        return driver.findElements(By.className("inventory_item_name"));
+    }
+    public List<String> getShownProductName(){
+        List<WebElement> shownNamesElements = shownElements();
+        List<String> shownNames = new ArrayList<>();
+
+        for (WebElement element : shownNamesElements) {
+            shownNames.add(element.getText());
+        }
+        return shownNames;
+    }
+
+    public List<String> getActualNames() throws InterruptedException {
+        List<WebElement> shownNamesElements = shownElements();
+        List<String> actualProductNames = new ArrayList<>();
+        for (int i = 0; i < shownNamesElements.size(); i++) {
+            //Re-searching elements in each iteration of the loop.
+            List<WebElement> updatedElements = driver.findElements(By.className("inventory_item_name"));
+            WebElement element = updatedElements.get(i);
+
+            clickableAndClick(element);
+            verifyVisibilityOfElement(productName);
+            String actualName = productName.getText();
+            actualProductNames.add(actualName);
+            backToProductsPage();
+        }
+        return actualProductNames;
+    }
+
+    private void compareLists(List<String> shownNames, List<String> actualNames) {
+        if (shownNames.size() != actualNames.size()) {
+            System.out.println("The lists do not have the same number of elements.");
+            return;
+        }
+
+        boolean differance = false;
+
+        for (int i = 0; i < shownNames.size(); i++) {
+            String element1 = shownNames.get(i);
+            String element2 = actualNames.get(i);
+
+            if (!element1.equals(element2)) {
+                System.out.println("Differance on position " + i + ": " + element1 + " != " + element2);
+                differance = true;
+            }
+        }
+
+        if (!differance) {
+            System.out.println();
         }
 
     }
 
-    public ArrayList<String> productName() {
-
-    }
-    public void getShownProductInfo() {
-        ArrayList<String> shownNames = new ArrayList<>();
-        for (WebElement element : productElement) {
-
-        }
+    public void backToProductsPage() throws InterruptedException {
+        clickableAndClick(backToProductsButton);
+        Thread.sleep(1000);
     }
 
     public void visibleAndGetSrc(WebElement element, String expectedSrc) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOf(element));
+        verifyVisibilityOfElement(element);
         Assert.assertEquals(element.getAttribute("src"), expectedSrc, "URL doesn't match");
     }
 
+    public void clickableAndClick(WebElement element) {
+        verifyClickabilityOfElement(element);
+        element.click();
+    }
 
+    public void verifyVisibilityOfElement(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void verifyClickabilityOfElement(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
 }

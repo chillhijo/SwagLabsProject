@@ -58,7 +58,6 @@ public class HomePage extends PageBase {
         String ActualUrl = driver.getCurrentUrl();
         String ExpectedUrl = "https://www.saucedemo.com/inventory.html";
         Assert.assertEquals(ActualUrl, ExpectedUrl);
-        System.out.println(ActualUrl);
 
         Assert.assertEquals(homePageSwagLogo.getText(), "Swag Labs", "Home page logo doesn't match.");
         Assert.assertEquals(productTitleUnderHamburgerMenu.getText(), "Products", "Home page title doesn't match.");
