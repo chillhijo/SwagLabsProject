@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class PageBase {
-
     protected WebDriver driver;
 
     public PageBase(WebDriver driver) {
