@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.lang.reflect.Array;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProblemUserLoged extends PageBase {
+
     public ProblemUserLoged(WebDriver driver) {
         super(driver);
     }
@@ -47,7 +47,8 @@ public class ProblemUserLoged extends PageBase {
     private WebElement productName;
     @FindBy(id = "back-to-products")
     private WebElement backToProductsButton;
-
+    @FindBy(className = "btn_inventory")
+    private WebElement itemAddRemoveBtn;
 
     String sauceLabsBackpackImgURL = "https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.0a0b85a3.jpg";
     String sauceLabsBikeLightImgURL = "https://www.saucedemo.com/static/media/bike-light-1200x1500.37c843b0.jpg";
@@ -123,12 +124,21 @@ public class ProblemUserLoged extends PageBase {
         if (!differance) {
             System.out.println();
         }
-
     }
 
-    public void backToProductsPage() throws InterruptedException {
+    public void verifyAddingProductInCart() {
+        List<WebElement> itemAddRemoveButtons = driver.findElements(By.className("btn_inventory"));
+        List<String> btnTextAfterClick = new ArrayList<>();
+        for (WebElement btn : itemAddRemoveButtons) {
+            List<WebElement> updatedItemAddRemoveButtons = driver.findElements(By.className("btn_inventory"));
+            System.out.println("btnTXT: " + btn.getText());
+            btnTextAfterClick.add(btn.getText());
+            System.out.println("btn Text: " + btnTextAfterClick);
+        }
+    }
+
+    public void backToProductsPage() {
         clickableAndClick(backToProductsButton);
-        Thread.sleep(1000);
     }
 
     public void visibleAndGetSrc(WebElement element, String expectedSrc) {
