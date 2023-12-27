@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e41612-b443-4c2c-be82-c7ca843a9784" name="Changes" comment="Added PageFactory initialization into PageBase, and some more improvements">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/PageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProblemUserLoged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProblemUserLoged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/problem_user_tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login_tests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +25,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/test/java/tests/LoginTest.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,54 +39,88 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.end_to_end_test.e2e_test_001.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.home_page_tests.verify_home_page_test001.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.locked_out_user_tests.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.locked_out_user_tests.login_with_locked_out_user.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.login_tests.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.login_tests.login_with_locked_out_user_test003.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.problem_user_tests.verifySauceLabsBackpack.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.shopping_cart_test.verify_shopping_cart_test001.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;problem__user&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dusko-PC/AquaProjects/Slots&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;selenium.settings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.EmailNotification.executor": "Run",
+    "Application.EmailSender.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.end_to_end_test.e2e_test_001.executor": "Run",
+    "TestNG.home_page_tests.verify_home_page_test001.executor": "Run",
+    "TestNG.locked_out_user_tests.executor": "Run",
+    "TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot.executor": "Run",
+    "TestNG.locked_out_user_tests.login_with_locked_out_user.executor": "Run",
+    "TestNG.login_tests.executor": "Run",
+    "TestNG.login_tests.login_with_locked_out_user_test003.executor": "Run",
+    "TestNG.login_tests.verify_login_page_test001.executor": "Run",
+    "TestNG.problem_user_tests.verifySauceLabsBackpack.executor": "Run",
+    "TestNG.shopping_cart_test.verify_shopping_cart_test001.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "problem__user",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Dusko-PC/AquaProjects/Slots",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "selenium.settings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources\config" />
+      <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources\screenshots" />
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources\test_cases" />
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\resources" />
       <recent name="C:\Users\Dusko-PC\IdeaProjects\SwagLabsProject\src\test\java\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="util" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.problem_user_tests.verifySauceLabsBackpack">
-    <configuration name="end_to_end_test.e2e_test_001" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.EmailSender">
+    <configuration name="EmailNotification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.EmailNotification" />
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.end_to_end_test" />
-      <option name="METHOD_NAME" value="e2e_test_001" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.EmailSender" />
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailNotification.email" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SwagLabsProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="util" />
+      <option name="MAIN_CLASS_NAME" value="util.EmailNotification" />
+      <option name="METHOD_NAME" value="email" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -97,43 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="locked_out_user_tests.login_locked_out_user_and_screenshot" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.locked_out_user_tests" />
-      <option name="METHOD_NAME" value="login_locked_out_user_and_screenshot" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="locked_out_user_tests.login_with_locked_out_user" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SwagLabsProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.locked_out_user_tests" />
-      <option name="METHOD_NAME" value="login_with_locked_out_user" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="login_tests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="login_tests.verify_login_page_test001" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SwagLabsProject" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +138,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.login_tests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="verify_login_page_test001" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -170,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EmailSender" />
+        <item itemvalue="TestNG.login_tests.verify_login_page_test001" />
+        <item itemvalue="Application.EmailNotification" />
+        <item itemvalue="TestNG.EmailNotification.email" />
         <item itemvalue="TestNG.problem_user_tests.verifySauceLabsBackpack" />
-        <item itemvalue="TestNG.end_to_end_test.e2e_test_001" />
-        <item itemvalue="TestNG.login_tests" />
-        <item itemvalue="TestNG.locked_out_user_tests.login_locked_out_user_and_screenshot" />
-        <item itemvalue="TestNG.locked_out_user_tests.login_with_locked_out_user" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +222,7 @@
       <workItem from="1703257489407" duration="33000" />
       <workItem from="1703500136389" duration="4000" />
       <workItem from="1703501662482" duration="459000" />
+      <workItem from="1703704372272" duration="5115000" />
     </task>
     <task id="LOCAL-00001" summary="Added Test Cases text file">
       <option name="closed" value="true" />
