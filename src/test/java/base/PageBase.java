@@ -28,6 +28,18 @@ public class PageBase {
     String lockedOutUserFilePath = "resources/screenshots/lockedOutUser";
     String lockedOutUserFileName = "Locked out user error.png";
 
+    public void addProductToCart(WebElement product) {
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(product));
+        product.click();
+    }
+
+    public void removeProductFromCart(WebElement removeProduct) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(removeProduct));
+        removeProduct.click();
+    }
+
     public void takeAScreenShotOfLoginBox() throws IOException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(loginBoxForScreenShot));

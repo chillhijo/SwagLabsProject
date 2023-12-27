@@ -1,7 +1,7 @@
 package tests;
 
 import base.BaseTest;
-import org.openqa.selenium.json.JsonOutput;
+import org.apache.commons.mail.EmailException;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
@@ -16,7 +16,7 @@ public class login_tests extends BaseTest {
     long startTime = System.currentTimeMillis();
 
     @Test(description = "Verify Login page", priority = 1)
-    public void verify_login_page_test001() {
+    public void verify_login_page_test001() throws EmailException, IOException {
         loginPage = new LoginPage(driver);
         loginPage.verifyLoginPageUrl();
         loginPage.verifyLoginPageLoginLogo();
@@ -29,6 +29,7 @@ public class login_tests extends BaseTest {
     public void login_with_standard_user_test002() {
         loginPage = new LoginPage(driver);
         loginPage.loginStandardUser("standard_user");
+
     }
 
     @Test(description = "Login with locked out user", priority = 3)
